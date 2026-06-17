@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>카드뉴스 템플릿 2 - 미니멀 브리핑</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #eeeeee;
+      font-family: Pretendard, "Spoqa Han Sans Neo", "Noto Sans KR", Arial, sans-serif;
+      color: #111;
+    }
+    .wrap { display: grid; gap: 48px; justify-content: center; padding: 48px 0; }
+    .card {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(0,0,0,.12);
+    }
+    .hero {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,.20)),
+        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+    }
+    .title-card {
+      position: absolute;
+      left: 92px;
+      right: 92px;
+      bottom: 112px;
+      padding: 58px 54px;
+      background: rgba(255,255,255,.94);
+      border-radius: 34px;
+      text-align: center;
+      box-shadow: 0 24px 70px rgba(0,0,0,.18);
+    }
+    .title-card small {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 25px;
+      letter-spacing: .16em;
+      font-weight: 850;
+      color: #6d28d9;
+    }
+    h1 { margin: 0; font-size: 78px; line-height: 1.05; letter-spacing: -.055em; font-weight: 900; }
+    .topbar {
+      position: absolute;
+      top: 64px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 22px;
+      letter-spacing: .14em;
+      font-weight: 850;
+      color: #6d28d9;
+    }
+    .content {
+      position: absolute;
+      top: 142px;
+      left: 70px;
+      right: 70px;
+    }
+    h2 { margin: 0 0 24px; font-size: 70px; line-height: 1.06; letter-spacing: -.055em; font-weight: 900; }
+    .sub { margin: 0; font-size: 31px; line-height: 1.48; color: #4b5563; font-weight: 550; letter-spacing: -.025em; }
+    .media {
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      bottom: 78px;
+      height: 730px;
+      border-radius: 36px;
+      background: #f7f7f8;
+      border: 1px solid #e5e7eb;
+      padding: 42px;
+    }
+    .screen {
+      height: 100%;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      padding: 42px;
+    }
+    .article-line { height: 24px; border-radius: 99px; background: #e5e7eb; margin-bottom: 24px; }
+    .article-line.accent { width: 55%; background: #6d28d9; }
+    .image-placeholder {
+      margin-top: 34px;
+      height: 330px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+      display: grid;
+      place-items: center;
+      color: #6d28d9;
+      font-size: 34px;
+      font-weight: 850;
+      letter-spacing: -.03em;
+    }
+    .summary {
+      position: absolute;
+      inset: 0;
+      padding: 92px 78px;
+      background: #fff;
+    }
+    .summary h2 { margin-top: 120px; margin-bottom: 58px; }
+    .list { display: grid; gap: 24px; }
+    .item {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      align-items: center;
+      padding: 32px 34px;
+      border-radius: 28px;
+      border: 1px solid #e5e7eb;
+      background: #fafafa;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -.035em;
+    }
+    .num {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #6d28d9; color: #fff;
+      display: grid; place-items: center;
+      font-size: 25px; font-weight: 900;
+    }
+    .conclusion {
+      position: absolute;
+      left: 78px;
+      right: 78px;
+      bottom: 120px;
+      padding: 34px 42px;
+      border-radius: 28px;
+      background: #111;
+      color: #fff;
+      font-size: 36px;
+      line-height: 1.35;
+      font-weight: 850;
+      letter-spacing: -.035em;
+    }
+    .cta {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 86px;
+      background: #fafafa;
+    }
+    .cta h2 { font-size: 72px; line-height: 1.16; margin-bottom: 44px; }
+    .button {
+      display: inline-block;
+      padding: 26px 46px;
+      border-radius: 999px;
+      background: #6d28d9;
+      color: #fff;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+    .footer {
+      position: absolute;
+      bottom: 58px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 22px;
+      color: #777;
+      font-weight: 800;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="hero"></div>
+      <div class="title-card">
+        <small>AI BRIEFING</small>
+        <h1>오늘의 AI 뉴스<br />핵심만 30초 요약</h1>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="topbar"><span>ISSUE 01</span><span>30 SEC READ</span></div>
+      <div class="content">
+        <h2>무엇이<br />달라졌나?</h2>
+        <p class="sub">새로운 AI 기능은 반복 업무 처리 속도를 크게 높였습니다.</p>
+      </div>
+      <div class="media">
+        <div class="screen">
+          <div class="article-line accent"></div>
+          <div class="article-line"></div>
+          <div class="article-line" style="width:84%"></div>
+          <div class="article-line" style="width:67%"></div>
+          <div class="image-placeholder">자료화면 / 기사 캡처</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="summary">
+        <div class="topbar" style="top:64px;left:78px;right:78px;"><span>SUMMARY</span><span>3 POINTS</span></div>
+        <h2>핵심만<br />정리하면</h2>
+        <div class="list">
+          <div class="item"><span class="num">1</span><span>반복 업무 자동화</span></div>
+          <div class="item"><span class="num">2</span><span>데이터 처리 속도 향상</span></div>
+          <div class="item"><span class="num">3</span><span>검토 부담 감소</span></div>
+        </div>
+        <div class="conclusion">결론: 실무 적용성이 높아지고 있습니다.</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cta">
+        <div>
+          <h2>더 많은 AI 실무 트렌드가<br />궁금하다면</h2>
+          <span class="button">팔로우하고 다음 카드뉴스 보기</span>
+        </div>
+      </div>
+      <div class="footer"><span>@your_brand</span><span>#AI뉴스 #업무자동화</span></div>
+    </section>
+  </main>
+</body>
+</html>

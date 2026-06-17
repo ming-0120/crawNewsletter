@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card News Template 2 - Clean Report</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e9edf5;
+      font-family: Pretendard, "Noto Sans KR", Arial, sans-serif;
+      color: #111827;
+    }
+    .page-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+      padding: 48px 0;
+    }
+    .card {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      background: #f8fafc;
+    }
+    .content { position: absolute; inset: 0; padding: 86px; }
+    .kicker {
+      font-size: 26px;
+      font-weight: 900;
+      color: #1e3a8a;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .cover-visual {
+      position: absolute;
+      top: 170px;
+      right: -90px;
+      width: 760px;
+      height: 760px;
+      border-radius: 80px;
+      overflow: hidden;
+      opacity: .9;
+    }
+    .cover-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .cover-title-box {
+      position: absolute;
+      left: 86px;
+      right: 86px;
+      bottom: 120px;
+      z-index: 2;
+    }
+    .cover-title {
+      margin: 0;
+      font-size: 82px;
+      line-height: 1.12;
+      letter-spacing: -0.06em;
+      font-weight: 900;
+      color: #0f172a;
+    }
+    .cover-sub {
+      margin-top: 26px;
+      font-size: 31px;
+      line-height: 1.5;
+      color: #475569;
+      font-weight: 600;
+    }
+    .top-title {
+      margin: 0;
+      font-size: 64px;
+      line-height: 1.18;
+      letter-spacing: -0.055em;
+      font-weight: 900;
+      color: #0f172a;
+    }
+    .top-sub {
+      margin-top: 22px;
+      max-width: 780px;
+      font-size: 30px;
+      line-height: 1.5;
+      color: #475569;
+      font-weight: 500;
+    }
+    .media-box {
+      position: absolute;
+      left: 86px;
+      right: 86px;
+      bottom: 140px;
+      height: 690px;
+      background: #fff;
+      border-radius: 36px;
+      overflow: hidden;
+      border: 1px solid #d8dee9;
+      box-shadow: 0 28px 70px rgba(15,23,42,.12);
+    }
+    .media-box img { width: 100%; height: 100%; object-fit: cover; }
+    .caption {
+      position: absolute;
+      left: 86px;
+      right: 86px;
+      bottom: 72px;
+      font-size: 23px;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .number-page {
+      padding: 100px 86px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .big-num {
+      margin-bottom: 38px;
+      font-size: 150px;
+      line-height: 1;
+      color: #1e3a8a;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+    }
+    .main-message {
+      margin: 0;
+      max-width: 850px;
+      font-size: 72px;
+      line-height: 1.18;
+      letter-spacing: -0.06em;
+      font-weight: 900;
+      color: #0f172a;
+    }
+    .desc {
+      margin-top: 42px;
+      max-width: 840px;
+      font-size: 31px;
+      line-height: 1.65;
+      color: #475569;
+      font-weight: 500;
+    }
+    .table-title {
+      margin: 0 0 46px;
+      font-size: 62px;
+      line-height: 1.2;
+      letter-spacing: -0.055em;
+      color: #0f172a;
+      font-weight: 900;
+    }
+    .check-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(15,23,42,.08);
+    }
+    .check-table th,
+    .check-table td {
+      padding: 34px 36px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: left;
+      font-size: 28px;
+      line-height: 1.42;
+    }
+    .check-table th {
+      background: #1e3a8a;
+      color: #fff;
+      font-size: 25px;
+      letter-spacing: .03em;
+    }
+    .check-table tr:last-child td { border-bottom: 0; }
+    .check-table td:first-child {
+      width: 220px;
+      color: #1e3a8a;
+      font-weight: 900;
+    }
+    .cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px;
+      background: #fff;
+    }
+    .cta h2 {
+      margin: 0;
+      font-size: 76px;
+      line-height: 1.22;
+      letter-spacing: -0.06em;
+      color: #0f172a;
+      font-weight: 900;
+    }
+    .cta p {
+      margin-top: 34px;
+      font-size: 32px;
+      line-height: 1.55;
+      color: #475569;
+    }
+    .bottom-line {
+      position: absolute;
+      left: 120px;
+      right: 120px;
+      bottom: 110px;
+      height: 8px;
+      background: #1e3a8a;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body>
+  <main class="page-wrap">
+    <section class="card">
+      <div class="content"><div class="kicker">AI Work Trend</div></div>
+      <div class="cover-visual"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80" alt="메인이미지"></div>
+      <div class="cover-title-box">
+        <h1 class="cover-title">업무 자동화,<br />어디까지 왔을까?</h1>
+        <p class="cover-sub">AI 기반 사무 자동화 흐름 정리</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="content">
+        <h2 class="top-title">오늘의 핵심 자료</h2>
+        <p class="top-sub">자동화 도입은 단순 반복 업무를 넘어 부서 단위로 확산되고 있습니다.</p>
+      </div>
+      <div class="media-box"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80" alt="자료화면"></div>
+      <div class="caption">자료화면 캡션: 핵심 수치 또는 출처를 한 줄로 입력</div>
+    </section>
+
+    <section class="card number-page">
+      <div class="big-num">01</div>
+      <h2 class="main-message">자동화는 도구보다<br />업무 흐름 분석이 먼저입니다.</h2>
+      <p class="desc">어떤 업무가 반복되는지, 어떤 기준으로 판단되는지, 어디서 시간이 가장 많이 쓰이는지 확인해야 합니다.</p>
+    </section>
+
+    <section class="card">
+      <div class="content">
+        <h2 class="table-title">AI 자동화 도입 전<br />체크포인트</h2>
+        <table class="check-table">
+          <thead>
+            <tr><th>구분</th><th>체크 내용</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>정확도</td><td>결과 검증 기준이 있는가?</td></tr>
+            <tr><td>보안</td><td>사내 데이터 사용 범위가 정해졌는가?</td></tr>
+            <tr><td>비용</td><td>API 호출량과 토큰 비용을 관리하는가?</td></tr>
+            <tr><td>운영</td><td>오류 발생 시 담당자가 명확한가?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card cta">
+      <h2>반복 업무를 찾는 것이<br />AI 자동화의 첫 단계입니다.</h2>
+      <p>이 콘텐츠를 저장해두고<br />우리 팀 업무에 적용해보세요.</p>
+      <div class="bottom-line"></div>
+    </section>
+  </main>
+</body>
+</html>

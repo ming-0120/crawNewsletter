@@ -1,0 +1,39 @@
+{
+  "page_title": "우리 회사에서는 AI를 어디까지 쓰고 있을까?",
+  "cover": {
+    "eyebrow": "사내 AI 활용 점검",
+    "title": "지금, 우리의 AI 업무 범위는 어디까지일까요?"
+  },
+  "data_view": {
+    "label": "AI 활용 흐름 한눈에 보기",
+    "title": "업무 재설계와 비용 관리가 핵심 이슈로",
+    "subtitle": "해외 기업들은 AI·자동화 중심으로 업무를 다시 설계하고, 고급 모델과 저렴한 모델을 나눠 쓰며 비용과 효율을 함께 관리하고 있습니다."
+  },
+  "key_message": {
+    "label": "우리가 참고할 포인트",
+    "quote_before": "이제 중요한 질문은",
+    "strong_text": "‘AI를 쓰고 있나?’가 아니라 ‘AI를 어디에, 얼마나 잘 쓰고 있나?’",
+    "quote_after": "입니다.",
+    "summary": "업무 전체를 AI로 바꾸기보다, 사람의 전문성과 AI 도구를 함께 쓰는 구조로 재설계하고, 비싼 모델은 꼭 필요한 핵심 업무에, 저렴한 모델은 반복·기초 작업에 쓰는 식의 세분화가 필요해 보입니다. 우리 회사도 현재 AI를 쓰는·쓸 수 있는 업무 범위를 이렇게 나눠서 점검해볼 수 있습니다."
+  },
+  "cta": {
+    "title": "우리 팀은 어디까지 AI를 쓰고 있을까요?",
+    "body": "· 지금 우리 팀에서 AI를 쓰는 업무는 무엇인가요?\n· 반복적이거나 요약·정리 위주의 일 중, 더 저렴한 AI로 처리할 수 있는 부분은 없나요?\n· 사람의 판단이 중요한 핵심 업무에, 더 정교한 AI 지원을 붙일 수 있는 지점은 어디인가요?\n· 무작정 AI 사용을 늘리기보다, 비용과 효과를 함께 보고 우선순위를 정하고 있나요?\n이 질문들을 우리 회사·우리 팀의 AI 활용 범위를 점검하는 체크리스트로 활용해보세요.",
+    "brand_left": "사내 뉴스레터 AI 특집",
+    "brand_right": "※ 이 카드뉴스는 외부 기사 흐름을 바탕으로 한 참고용이며,\n우리 회사의 실제 AI 활용 현황을 단정하지 않습니다."
+  },
+  "sources": [
+    {
+      "title": "Opendoor’s India exit is fueling a bigger conversation about AI and outsourcing",
+      "source": "techcrunch.com",
+      "published_date": "Thu, 11 Jun 2026 04:02:19 GMT",
+      "url": "https://techcrunch.com/2026/06/10/opendoors-india-exit-is-fueling-a-bigger-conversation-about-ai-and-outsourcing"
+    },
+    {
+      "title": "The All-You-Can-Eat AI Era Is Over. It's Time to Count Calories.",
+      "source": "www.businessinsider.com",
+      "published_date": "Wed, 10 Jun 2026 09:19:01 GMT",
+      "url": "https://www.businessinsider.com/ai-companies-raising-prices-internal-token-limits-openai-anthropic-ipo-2026-6"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>카드뉴스 템플릿 3 - 포인트 강조형</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #dedbd2;
+      font-family: SUIT, Pretendard, "IBM Plex Sans KR", "Noto Sans KR", Arial, sans-serif;
+      color: #181818;
+    }
+    .wrap { display: grid; gap: 48px; justify-content: center; padding: 48px 0; }
+    .card {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      background: #f7f2e8;
+      box-shadow: 0 18px 45px rgba(0,0,0,.15);
+    }
+    .hero {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.80)),
+        url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+    }
+    .cover-text {
+      position: absolute;
+      left: 80px;
+      right: 80px;
+      bottom: 120px;
+      color: #fff;
+    }
+    .cover-text h1 {
+      margin: 0;
+      font-size: 88px;
+      line-height: 1.05;
+      letter-spacing: -.06em;
+      font-weight: 950;
+    }
+    .highlight { color: #ffcc00; }
+    .tag {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 14px 22px;
+      border-radius: 12px;
+      background: #ffcc00;
+      color: #111;
+      font-size: 25px;
+      font-weight: 950;
+      letter-spacing: -.02em;
+    }
+    .header {
+      position: absolute;
+      top: 64px;
+      left: 70px;
+      right: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #111;
+      font-size: 23px;
+      font-weight: 950;
+      letter-spacing: .08em;
+    }
+    .header span:first-child { background: #111; color: #ffcc00; padding: 12px 18px; border-radius: 10px; }
+    .title {
+      position: absolute;
+      top: 150px;
+      left: 70px;
+      right: 70px;
+    }
+    h2 {
+      margin: 0 0 24px;
+      font-size: 74px;
+      line-height: 1.02;
+      letter-spacing: -.065em;
+      font-weight: 950;
+    }
+    .desc {
+      margin: 0;
+      max-width: 800px;
+      font-size: 32px;
+      line-height: 1.45;
+      font-weight: 650;
+      letter-spacing: -.035em;
+      color: #4a4030;
+    }
+    .media {
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      bottom: 82px;
+      height: 715px;
+      border: 5px solid #111;
+      border-radius: 34px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .label-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 82px;
+      border-bottom: 5px solid #111;
+      font-size: 28px;
+      font-weight: 950;
+      text-align: center;
+    }
+    .label-row div { display: grid; place-items: center; }
+    .label-row div:first-child { background: #111; color: #fff; }
+    .label-row div:last-child { background: #ffcc00; color: #111; }
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: calc(100% - 82px);
+    }
+    .side { padding: 44px 34px; border-right: 5px solid #111; }
+    .side:last-child { border-right: 0; background: #fffbea; }
+    .bar { height: 34px; border-radius: 999px; background: #d7d2c7; margin-bottom: 28px; }
+    .side:last-child .bar { background: #ffcc00; }
+    .message {
+      position: absolute;
+      inset: 0;
+      padding: 90px 78px;
+      background: #111;
+      color: #f7f2e8;
+    }
+    .message .tag { background: #ffcc00; color: #111; }
+    .big-copy {
+      position: absolute;
+      left: 78px;
+      right: 78px;
+      top: 285px;
+      font-size: 64px;
+      line-height: 1.23;
+      letter-spacing: -.055em;
+      font-weight: 900;
+    }
+    .criteria {
+      position: absolute;
+      left: 78px;
+      right: 78px;
+      bottom: 120px;
+      display: grid;
+      gap: 20px;
+    }
+    .criteria div {
+      padding: 28px 34px;
+      border-radius: 20px;
+      background: #ffcc00;
+      color: #111;
+      font-size: 42px;
+      font-weight: 950;
+      letter-spacing: -.04em;
+    }
+    .cta {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      text-align: center;
+      padding: 80px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,204,0,.38), transparent 32%),
+        #f7f2e8;
+    }
+    .cta h2 { font-size: 78px; line-height: 1.12; margin-bottom: 34px; }
+    .cta p { margin: 0; font-size: 38px; line-height: 1.45; font-weight: 850; letter-spacing: -.04em; }
+    .footer {
+      position: absolute;
+      left: 70px;
+      right: 70px;
+      bottom: 58px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 24px;
+      font-weight: 950;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <div class="hero"></div>
+      <div class="cover-text">
+        <div class="tag">QUESTION</div>
+        <h1><span class="highlight">반복 업무,</span><br />아직도 직접<br />하고 있나요?</h1>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="header"><span>PROBLEM</span><span>01 / 04</span></div>
+      <div class="title">
+        <h2>문제는<br /><span class="highlight" style="color:#111;background:#ffcc00;padding:0 12px;">시간</span>입니다</h2>
+        <p class="desc">반복 입력, 복사, 정리 작업이 하루 업무 시간을 잡아먹습니다.</p>
+      </div>
+      <div class="media">
+        <div class="label-row"><div>BEFORE</div><div>AFTER</div></div>
+        <div class="comparison">
+          <div class="side">
+            <div class="bar" style="width:92%"></div>
+            <div class="bar" style="width:78%"></div>
+            <div class="bar" style="width:86%"></div>
+            <div class="bar" style="width:63%"></div>
+            <div class="bar" style="width:82%"></div>
+          </div>
+          <div class="side">
+            <div class="bar" style="width:54%"></div>
+            <div class="bar" style="width:38%"></div>
+            <div class="bar" style="width:48%"></div>
+            <div class="bar" style="width:28%"></div>
+            <div class="bar" style="width:42%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="message">
+        <div class="tag">KEY POINT</div>
+        <div class="big-copy">자동화해야 할 업무는<br />대부분 복잡한 일이 아닙니다.</div>
+        <div class="criteria">
+          <div>반복되고</div>
+          <div>규칙이 있고</div>
+          <div>사람의 판단이 적은 일</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cta">
+        <div>
+          <h2>내 업무에서<br />반복되는 일을<br />먼저 찾아보세요.</h2>
+          <p>자동화는 거기서 시작됩니다.</p>
+        </div>
+      </div>
+      <div class="footer"><span>@your_brand</span><span>#RPA #자동화 #업무개선</span></div>
+    </section>
+  </main>
+</body>
+</html>

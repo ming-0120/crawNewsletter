@@ -1,0 +1,20 @@
+[
+  {
+    "query": "기업 사내 AI 활용 업무 자동화 사례 최신 뉴스",
+    "title": "Opendoor’s India exit is fueling a bigger conversation about AI and outsourcing - TechCrunch",
+    "url": "https://techcrunch.com/2026/06/10/opendoors-india-exit-is-fueling-a-bigger-conversation-about-ai-and-outsourcing",
+    "source": "techcrunch.com",
+    "published_date": "Thu, 11 Jun 2026 04:02:19 GMT",
+    "snippet": "“This is not an isolated restructuring,” Fersht said. “It is part of a much broader pattern we are starting to see as companies redesign operations around AI, automation, and much leaner workflows.”\n\nFersht argued that the winners would be companies that combine AI, software and human expertise to deliver outcomes without continually adding headcount, a model he described as “Services-as-Software.” While Opendoor may be one of the first high-profile examples, he said it is unlikely to be the last.",
+    "score": 0.42162386
+  },
+  {
+    "query": "기업 사내 AI 활용 업무 자동화 사례 최신 뉴스",
+    "title": "The All-You-Can-Eat AI Era Is Over. It's Time to Count Calories. - Business Insider",
+    "url": "https://www.businessinsider.com/ai-companies-raising-prices-internal-token-limits-openai-anthropic-ipo-2026-6",
+    "source": "www.businessinsider.com",
+    "published_date": "Wed, 10 Jun 2026 09:19:01 GMT",
+    "snippet": "That calculus has some executives angling for cheaper AI. Some companies Business Insider spoke to, including Coinbase, have begun offloading basic work to less advanced AI models, either from American companies or from Chinese firms like Deepseek and MiniMax.\n\nAhmad Awais, the founder of the coding agent startup Command Code, told Business Insider his company gained 10,000 customers in a recent 30-day stretch, largely driven by demand for cheaper models.\n\nFor some of those businesses, using the most advanced — and expensive — models isn't worth it for everything. Stuart, the Harness executive, likened using a cutting-edge AI model for basic text-summary work to \"taking the Ferrari to the grocery store.\" [...] Coinbase's Witoff pointed to an extreme hypothetical example of AI use that may have been fair game in the olden days of winter, but would now require much more scrutiny: analyzing all of the company's code for bugs using one of the state-of-the-art AI models.\n\n\"At our scale, that might cost $50,000 to $100,000 a run,\" he said. \"So if you've got a hundred people doing that independently, you're going to spend $10 million.\"\n\nSome projects are worth it. Coinbase's system alerts users when they're approaching their limits, but they can apply for an exception, which Witoff said are often granted. The system is meant to make workers more mindful about how they're using tokens. [...] \"Once people understand what's possible, usage takes off on its own. Then the focus shifts from 'Are people using AI?' to 'Are they using it well?' That's where we are today,\" he said.\n\nIt's the latest whiplash on the AI frontier.Executives and developers are rethinking their rapacious demand of recent months by switching models, imposing limits, and prioritizing projects. As a result, AI juggernauts, including OpenAI and Anthropic, risk losing market share to cheaper models — at a time when they're racing toward stock-market-altering IPOs.",
+    "score": 0.40839532
+  }
+]
